@@ -648,3 +648,134 @@ header {
   }
 }
 /* ! features section end */
+
+/* ! trending product section start */
+.trending-product {
+  margin-top: 8.25rem;
+  margin-bottom: 2.5rem;
+  .title {
+    margin-bottom: 2.5rem;
+  }
+  .trending-product-wrapper {
+    display: flex;
+    gap: 1.75rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+      width: 25%;
+    }
+    .product-item {
+      text-align: center;
+      box-shadow: 0 0.5rem 2.5rem rgba(49, 32, 138, 0.05);
+      .image {
+        background-color: #f6f7fb;
+        position: relative;
+        padding-top: 100%;
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .info {
+        margin-top: 1rem;
+        p {
+          font-weight: 700;
+        }
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          font-family: var(--font-josefin);
+          span {
+            &:first-child {
+              font-size: 0.875rem;
+            }
+            &:last-child {
+              font-size: 0.75rem;
+              color: var(--sub-text);
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* ! trending product section end */
+
+/* ! offer product section start */
+.offer-product {
+  .offer-product-wrapper {
+    display: flex;
+    gap: 1.75rem;
+    & > div {
+      width: 33.3333%;
+    }
+    .banner {
+      padding: 1.5rem 2rem 0.5rem;
+      &:first-of-type {
+        background-color: #fff6fb;
+      }
+      &:nth-child(2) {
+        background-color: #eeeffb;
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-family: var(--font-josefin);
+        font-weight: 600;
+      }
+      a {
+        color: var(--pink);
+        font-weight: 600;
+        text-underline-offset: 0.25rem;
+      }
+      img {
+        margin-top: -1rem;
+        display: block;
+        margin-left: auto;
+        width: 50%;
+      }
+    }
+    .products {
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      article {
+        display: flex;
+        align-items: center;
+        gap: 0.675rem;
+        .image {
+          width: 6.75rem;
+          background-color: #f6f7fb;
+          text-align: center;
+          img {
+            width: 60%;
+          }
+        }
+        div {
+          font-family: var(--font-josefin);
+          h6 {
+            font-size: 1rem;
+            font-weight: 600;
+          }
+          small {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* ! offer product section end */
