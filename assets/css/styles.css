@@ -97,6 +97,22 @@ img {
   font-weight: 700;
   font-size: 2.5rem;
 }
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 0 3.5rem;
+  margin-bottom: 3.5rem;
+  li {
+    font-size: 1.125rem;
+    cursor: pointer;
+    &.active {
+      color: var(--pink);
+      text-decoration: underline;
+    }
+  }
+}
 /* ! reusable style end */
 
 /* ! header start */
@@ -418,22 +434,6 @@ header {
 /* ! latest product section start */
 .latest-product {
   margin-bottom: 3.5rem;
-  .tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    gap: 0 3.5rem;
-    margin-bottom: 3.5rem;
-    li {
-      font-size: 1.125rem;
-      cursor: pointer;
-      &.active {
-        color: var(--pink);
-        text-decoration: underline;
-      }
-    }
-  }
   .latest-product-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -779,3 +779,69 @@ header {
   }
 }
 /* ! offer product section end */
+
+/* ! discount section start */
+.discount {
+  margin-top: 7.75rem;
+  .title {
+    margin-bottom: 2rem;
+  }
+  .discount-wrapper {
+    display: flex;
+    align-items: center;
+    .left {
+      flex: 1;
+      h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        font-family: var(--font-josefin);
+      }
+      h5 {
+        font-size: 1.25rem;
+        font-family: var(--font-josefin);
+        font-weight: 400;
+        color: var(--pink);
+      }
+      p {
+        margin: 1rem 0;
+        color: var(--sub-text);
+        font-weight: 500;
+      }
+      ul {
+        list-style: none;
+        columns: 2;
+        color: var(--sub-text);
+        font-weight: 500;
+        margin-bottom: 2rem;
+        li {
+          margin-bottom: 0.675rem;
+        }
+      }
+    }
+    .right {
+      max-width: 30rem;
+      width: 100%;
+      .image {
+        position: relative;
+        img {
+          position: relative;
+          z-index: 1;
+        }
+        span {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: rgb(252, 236, 241);
+            z-index: 0;
+          }
+        }
+      }
+    }
+  }
+}
+/* ! discount section end */
