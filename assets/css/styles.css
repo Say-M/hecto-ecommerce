@@ -40,6 +40,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
+  background-color: var(--white);
 }
 
 /* ! reusable style start */
@@ -100,6 +101,11 @@ img {
 /* ! reusable style end */
 
 /* ! header start */
+header {
+  position: sticky;
+  top: -3.375rem;
+  z-index: 1000;
+}
 .header-top {
   background-color: var(--purple);
   padding: 0.875rem 0;
@@ -142,6 +148,7 @@ img {
 }
 
 .header-bottom {
+  background-color: var(--white);
   .container {
     display: flex;
     align-items: center;
