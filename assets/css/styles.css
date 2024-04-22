@@ -467,6 +467,7 @@ header {
   .latest-product-wrapper {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -0.875rem;
     a {
       text-decoration: none;
       color: inherit;
