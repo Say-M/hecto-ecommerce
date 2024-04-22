@@ -113,6 +113,35 @@ img {
     }
   }
 }
+.dropdown {
+  position: relative;
+  &:hover {
+    ul {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  ul {
+    list-style: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    background-color: var(--white);
+    box-shadow: 0 0.5rem 2.5rem rgba(49, 32, 138, 0.05);
+    padding: 0.375rem 0;
+    opacity: 0;
+    pointer-events: none;
+    li {
+      padding: 0.25rem 0.75rem;
+      cursor: pointer;
+      font-size: 0.875rem;
+      color: var(--black);
+      &:hover {
+        background-color: var(--sky-blue-100);
+      }
+    }
+  }
+}
 /* ! reusable style end */
 
 /* ! header start */
