@@ -419,9 +419,22 @@ header {
   }
   .featured-product-wrapper {
     display: flex;
-    gap: 1.75rem;
-    .product-item {
+    flex-wrap: wrap;
+    margin: 0 -0.875rem;
+    & > div {
+      padding: 0 0.875rem 1.75rem;
       width: 25%;
+      @media screen and (max-width: 992px) {
+        width: 33.33%;
+      }
+      @media screen and (max-width: 768px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
+    }
+    .product-item {
       text-align: center;
       box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
       .image {
@@ -488,6 +501,10 @@ header {
           font-size: 1.125rem;
           font-weight: 700;
           color: var(--pink);
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
         .colors {
           margin: 0.5rem 0;
