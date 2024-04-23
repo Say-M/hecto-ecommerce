@@ -866,12 +866,36 @@ header {
 .offer-product {
   .offer-product-wrapper {
     display: flex;
-    gap: 1.75rem;
+    flex-wrap: wrap;
+    margin: 0 -0.875rem;
     & > div {
+      padding: 0 0.875rem 1.75rem;
       width: 33.3333%;
+      &:nth-child(1) {
+        @media screen and (max-width: 992px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        @media screen and (max-width: 992px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      &:nth-child(3) {
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+      }
     }
     .banner {
       padding: 1.5rem 2rem 0.5rem;
+      height: 100%;
       &:first-of-type {
         background-color: #fff6fb;
       }
@@ -913,15 +937,23 @@ header {
           width: 6.75rem;
           background-color: #f6f7fb;
           text-align: center;
+          flex-shrink: 0;
           img {
             width: 60%;
           }
         }
         div {
           font-family: var(--font-josefin);
+          &:last-child {
+            flex: 1;
+            overflow: hidden;
+          }
           h6 {
             font-size: 1rem;
             font-weight: 600;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
           }
           small {
             font-size: 0.875rem;
