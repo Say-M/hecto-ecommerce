@@ -104,9 +104,14 @@ img {
   list-style: none;
   gap: 0 3.5rem;
   margin-bottom: 3.5rem;
+  overflow: auto;
+  @media screen and (max-width: 768px) {
+    justify-content: start;
+  }
   li {
     font-size: 1.125rem;
     cursor: pointer;
+    white-space: nowrap;
     &.active {
       color: var(--pink);
       text-decoration: underline;
@@ -549,6 +554,15 @@ header {
       color: inherit;
       width: 33.3333%;
       padding: 0 0.875rem 2.5rem;
+      @media screen and (max-width: 992px) {
+        width: 33.33%;
+      }
+      @media screen and (max-width: 768px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
     }
     .product-item {
       .image {
