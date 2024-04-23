@@ -429,9 +429,6 @@ header {
     & > div {
       padding: 0 0.875rem 1.75rem;
       width: 25%;
-      @media screen and (max-width: 992px) {
-        width: 33.33%;
-      }
       @media screen and (max-width: 768px) {
         width: 50%;
       }
@@ -651,9 +648,19 @@ header {
   }
   .offer-wrapper {
     display: flex;
-    gap: 1.75rem;
-    .offer-item {
+    flex-wrap: wrap;
+    margin: 0 -0.875rem;
+    & > div {
       width: 25%;
+      padding: 0 0.875rem 1.75rem;
+      @media screen and (max-width: 992px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+    .offer-item {
       padding: 2.75rem 1.75rem;
       text-align: center;
       box-shadow: 0 0.5rem 2.5rem rgba(49, 32, 138, 0.05);
@@ -682,13 +689,21 @@ header {
   .container {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1050px) {
+      flex-direction: column;
+    }
   }
   .left {
     max-width: 30rem;
     width: 100%;
+    @media screen and (max-width: 1050px) {
+      margin-bottom: 3rem;
+    }
     .hero-image {
       position: relative;
-      margin-left: 5rem;
+      @media screen and (min-width: 1050px) {
+        margin-left: 5rem;
+      }
       img {
         position: relative;
         z-index: 1;
@@ -710,7 +725,9 @@ header {
   }
   .right {
     flex: 1;
-    padding-left: 3rem;
+    @media screen and (min-width: 1050px) {
+      padding-left: 3rem;
+    }
     h1 {
       font-family: var(--font-josefin);
       font-size: 2rem;
@@ -747,6 +764,7 @@ header {
           display: inline-block;
           margin-right: 0.75rem;
           margin-top: 0.5rem;
+          flex-shrink: 0;
         }
       }
     }
@@ -754,6 +772,12 @@ header {
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      @media screen and (max-width: 576px) {
+        .btn {
+          padding: 0 1.375rem;
+          font-size: 0.875rem;
+        }
+      }
       div {
         font-family: var(--font-josefin);
         display: flex;
@@ -779,11 +803,19 @@ header {
   }
   .trending-product-wrapper {
     display: flex;
-    gap: 1.75rem;
+    flex-wrap: wrap;
+    margin: 0 -0.875rem;
     a {
       text-decoration: none;
       color: inherit;
       width: 25%;
+      padding: 0 0.875rem 1.75rem;
+      @media screen and (max-width: 768px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
     }
     .product-item {
       text-align: center;
