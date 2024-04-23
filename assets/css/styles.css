@@ -189,11 +189,16 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    span {
+    & > span {
       cursor: pointer;
       i {
         font-size: 0.75rem;
         margin-left: 0.25rem;
+      }
+      @media screen and (max-width: 576px) {
+        span {
+          display: none;
+        }
       }
     }
     @media screen and (max-width: 576px) {
@@ -251,6 +256,9 @@ header {
     .search-box {
       height: 2.5rem;
       display: flex;
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
       input {
         appearance: none;
         font-size: 1rem;
