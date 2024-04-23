@@ -974,8 +974,14 @@ header {
   .discount-wrapper {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1050px) {
+      flex-direction: column-reverse;
+    }
     .left {
       flex: 1;
+      @media screen and (max-width: 1050px) {
+        margin-top: 3rem;
+      }
       h1 {
         font-size: 2.25rem;
         font-weight: 700;
@@ -1040,9 +1046,19 @@ header {
   }
   .top-category-wrapper {
     display: flex;
-    gap: 1.75rem;
-    .category-item {
+    flex-wrap: wrap;
+    margin: 0 -0.875rem;
+    & > div {
       width: 25%;
+      padding: 0 0.875rem 1.75rem;
+      @media screen and (max-width: 992px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+    .category-item {
       text-align: center;
       .image {
         position: relative;
@@ -1090,6 +1106,17 @@ header {
           transform: translateX(-50%);
           opacity: 0;
           transition: opacity 0.15s ease-in-out;
+          span {
+            @media screen and (max-width: 576px) {
+              display: none;
+            }
+          }
+          i {
+            display: none;
+            @media screen and (max-width: 576px) {
+              display: inline;
+            }
+          }
         }
       }
       &:hover {
@@ -1154,9 +1181,19 @@ header {
   }
   .blog-wrapper {
     display: flex;
-    gap: 1.75rem;
-    .blog-item {
+    flex-wrap: wrap;
+    margin: 0 -0.875rem;
+    & > div {
+      padding: 0 0.875rem 1.75rem;
       width: 33.3333%;
+      @media screen and (max-width: 768px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
+    }
+    .blog-item {
       box-shadow: 0 0.5rem 2.5rem rgba(49, 32, 138, 0.05);
       border-radius: 0.5rem;
       .image {
@@ -1207,6 +1244,10 @@ header {
         p {
           color: var(--sub-text);
           margin-bottom: 1rem;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
         }
         a {
           color: var(--text);
